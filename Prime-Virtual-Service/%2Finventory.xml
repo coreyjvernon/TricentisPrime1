@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction xmlns:con="http://eviware.com/soapui/config" name="/inventory" method="GET" resourcePath="/inventory" id="293eda16-7ea1-4b2c-9f73-f515ff6f109f">
+  <con:settings id="a8f8b7cd-9908-40a1-9fc4-a4f92efc6ef2">
+    <con:setting id="505b3563-d942-4806-85eb-51d9a8886a33fileName">%2Finventory</con:setting>
+    <con:setting id="293eda16-7ea1-4b2c-9f73-f515ff6f109ffileName">%2Finventory</con:setting>
+  </con:settings>
+  <con:defaultResponse>Error</con:defaultResponse>
+  <con:dispatchStyle>PARAMETER</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:parameterDispatcherRuleContainer>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>Rule 1</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>itemNumber</con:parameterName>
+        <con:parameterValue>1</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>Response 1</con:responseName>
+    </con:ParameterDispatcherRule>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>Rule 2</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>itemNumber</con:parameterName>
+        <con:parameterValue>2</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>Response 2</con:responseName>
+    </con:ParameterDispatcherRule>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>Rule 3</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>itemNumber</con:parameterName>
+        <con:parameterValue>3</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>Response 3</con:responseName>
+    </con:ParameterDispatcherRule>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>Rule 4</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>itemNumber</con:parameterName>
+        <con:parameterValue>4</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>Response 4</con:responseName>
+    </con:ParameterDispatcherRule>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>Rule 5</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>itemNumber</con:parameterName>
+        <con:parameterValue>5</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>Response 5</con:responseName>
+    </con:ParameterDispatcherRule>
+  </con:parameterDispatcherRuleContainer>
+  <con:routeScript/>
+  <con:response name="Response 1" id="8668c124-f28f-442c-bb7b-a5f7d198b78a" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource="Data Source 1">
+    <con:settings/>
+    <con:responseContent>[ {
+  "id" : "d290f1ee-6c54-4b01-90e6-d701748f0851",
+  "name" : "Widget Adapter",
+  "releaseDate" : "2016-08-29T09:12:33.001Z",
+  "manufacturer" : {
+    "name" : "ACME Corporation",
+    "homePage" : "https://www.acme-corp.com",
+    "phone" : "408-867-5309"
+  }
+}]</con:responseContent>
+  </con:response>
+  <con:response name="Response 2" id="55e0a929-d493-40be-8971-a4ea81676aa4" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource="">
+    <con:settings/>
+    <con:responseContent>[ {
+  "id" : "d290f1ee-6c54-4b01-01d7-d701748g1962",
+  "name" : "Mobile Extender",
+  "releaseDate" : "2016-08-29T09:12:33.001Z",
+  "manufacturer" : {
+    "name" : "Initech",
+    "homePage" : "https://www.acme-corp.com",
+    "phone" : "357-561-8521"
+  }
+}]</con:responseContent>
+  </con:response>
+  <con:response name="Response 3" id="11d8dd8c-f0df-4aee-8b6d-d06f47be28de" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource="">
+    <con:settings/>
+    <con:responseContent>[ {
+  "id" : "d290f1ee-6c54-4b01-12e8-d701748h2073",
+  "name" : "Hardware Maintainer",
+  "releaseDate" : "2016-08-29T09:12:33.001Z",
+  "manufacturer" : {
+    "name" : "Sussex Corp",
+    "homePage" : "https://www.acme-corp.com",
+    "phone" : "386-234-3068"
+  }
+} ]</con:responseContent>
+  </con:response>
+  <con:response name="Response 4" id="7335c3f1-a1e8-4f29-97fe-1b43b70007f6" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>[ {
+  "id" : "d290f1ee-6c54-4b01-23f9-d701748i3184",
+  "name" : "Software Cleaner",
+  "releaseDate" : "2016-08-29T09:12:33.001Z",
+  "manufacturer" : {
+    "name" : "Globex International",
+    "homePage" : "https://www.acme-corp.com",
+    "phone" : "854-994-5222"
+  }
+} ]</con:responseContent>
+  </con:response>
+  <con:response name="Response 5" id="3165d1b7-f169-4a5a-8c95-fdcf6a40a951" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>[ {
+  "id" : "d290f1ee-6c54-4b01-34g0-d701748j4295",
+  "name" : "Digital Optimizer",
+  "releaseDate" : "2016-08-29T09:12:33.001Z",
+  "manufacturer" : {
+    "name" : "Hooli",
+    "homePage" : "https://www.acme-corp.com",
+    "phone" : "650-212-6478"
+  }
+} ]</con:responseContent>
+  </con:response>
+  <con:response name="Error" id="b8ce6d9b-a2f1-4e63-8da1-ec890f69d0e5" httpResponseStatus="400" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource="">
+    <con:settings/>
+    <con:responseContent>[{
+	"response" : "No item found"
+	}]</con:responseContent>
+  </con:response>
+</con:restMockAction>

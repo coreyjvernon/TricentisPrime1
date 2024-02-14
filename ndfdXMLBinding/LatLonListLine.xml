@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="cea8dde5-b94e-422f-8112-7e711ec6d4a2" isOneWay="false" action="https://graphical.weather.gov/xml/DWMLgen/wsdl/ndfdXML.wsdl#LatLonListLine" name="LatLonListLine" bindingOperationName="LatLonListLine" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false">
+  <con:settings id="0d298d67-a086-40d4-8a4c-8080832a4ccc">
+    <con:setting id="cea8dde5-b94e-422f-8112-7e711ec6d4a2fileName">LatLonListLine</con:setting>
+  </con:settings>
+  <con:environmentSpec>
+    <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

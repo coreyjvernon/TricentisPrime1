@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RestService" id="759b48ce-8f75-4559-92df-cf4c94c9cc6e" name="Prime" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="https://api.swaggerhub.com/apis/Corey_Projects/Feb23Alpha/1.0.0">
+  <con:description id="07fc392d-e5f5-4ccc-a976-019f9b41b7c5">This is a Prime API</con:description>
+  <con:settings>
+    <con:setting id="759b48ce-8f75-4559-92df-cf4c94c9cc6efileName">Prime</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="https://api.swaggerhub.com/apis/Corey_Projects/Feb23Alpha/1.0.0">
+    <con:part>
+      <con:url>https://api.swaggerhub.com/apis/Corey_Projects/Feb23Alpha/1.0.0</con:url>
+      <con:content>{"openapi":"3.0.0","info":{"title":"Prime","description":"This is a Prime API","contact":{"email":"you@your-company.com"},"license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"1.0.0"},"servers":[{"url":"https://virtserver.swaggerhub.com/Corey_Projects/Feb23Alpha/1.0.0","description":"SwaggerHub API Auto Mocking"}],"tags":[{"name":"admins","description":"Secured Admin-only calls"},{"name":"developers","description":"Operations available to regular developers"}],"paths":{"/inventory":{"description":"","get":{"description":"By passing in the appropriate options, you can search for\navailable inventory in the system\n","parameters":[{"name":"searchString","in":"query","required":false,"schema":{"type":"string"}},{"name":"skip","in":"query","required":false,"schema":{"type":"string"}},{"name":"limit","in":"query","required":false,"schema":{"type":"string"}}],"responses":{"200":{"description":"search results matching criteria","content":{"application/json":{"example":""}}}}},"post":{"description":"Adds an item to the system","requestBody":{"content":{"application/json":{"example":"{\r\n  \"id\" : \"d290f1ee-6c54-4b01-90e6-d701748f0851\",\r\n  \"name\" : \"Widget Adapter\",\r\n  \"releaseDate\" : \"2016-08-29T09:12:33.001Z\",\r\n  \"manufacturer\" : {\r\n    \"name\" : \"ACME Corporation\",\r\n    \"homePage\" : \"https://www.acme-corp.com\",\r\n    \"phone\" : \"408-867-5309\"\r\n  }\r\n}"}}},"responses":{"default":{"description":"Default response"}}},"delete":{"description":"","parameters":[{"name":"api_key","in":"header","required":false,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}}},"components":{"schemas":{"InventoryItem":{"required":["id","manufacturer","name","releaseDate"],"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"d290f1ee-6c54-4b01-90e6-d701748f0851"},"name":{"type":"string","example":"Widget Adapter"},"releaseDate":{"type":"string","format":"date-time","example":"2016-08-29T09:12:33.001Z"},"manufacturer":{"$ref":"#/components/schemas/Manufacturer"}}},"Manufacturer":{"required":["name"],"type":"object","properties":{"name":{"type":"string","example":"ACME Corporation"},"homePage":{"type":"string","format":"url","example":"https://www.acme-corp.com"},"phone":{"type":"string","example":"408-867-5309"}}}}}}</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://virtserver.swaggerhub.com/Corey_Projects/Feb23Alpha/1.0.0</con:endpoint>
+    <con:endpoint>https://virtserver.swaggerhub.com/Corey_Projects/Feb23Alpha/2.0.0</con:endpoint>
+  </con:endpoints>
+</con:interface>

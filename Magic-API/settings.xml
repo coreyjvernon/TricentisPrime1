@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" xsi:type="con:RestService" id="a27b53d0-d147-4bba-94fd-4a688495e7ab" name="Magic API" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="https://api.swaggerhub.com/apis/Corey_Projects/Magic/1.0.0" basePath="">
+  <con:description id="807ada40-a79f-4f8a-90ba-de0274b3f2c8">This is a magic API</con:description>
+  <con:settings>
+    <con:setting id="a27b53d0-d147-4bba-94fd-4a688495e7abfileName">Magic-API</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="https://api.swaggerhub.com/apis/Corey_Projects/Magic/1.0.0">
+    <con:part>
+      <con:url>https://api.swaggerhub.com/apis/Corey_Projects/Magic/1.0.0</con:url>
+      <con:content>{"openapi":"3.0.0","info":{"title":"Magic API","description":"This is a magic API","contact":{"email":"you@your-company.com"},"license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"1.0.0"},"servers":[{"url":"https://virtserver.swaggerhub.com/Corey_Projects/Magic/1.0.0","description":"SwaggerHub API Auto Mocking"}],"tags":[{"name":"admins","description":"Secured Admin-only calls"},{"name":"developers","description":"Operations available to regular developers"}],"paths":{"/inventory":{"description":"","get":{"description":"By passing in the appropriate options, you can search for\navailable inventory in the system","parameters":[{"name":"itemNumber","in":"query","required":true,"schema":{"type":"string"}}],"responses":{"200":{"description":"search results matching criteria","content":{"application/json":{"example":""}}}}},"post":{"description":"Adds an item to the system","requestBody":{"content":{"application/json":{"example":"{\r\n  \"id\" : \"d290f1ee-6c54-4b01-90e6-d701748f0851\",\r\n  \"name\" : \"Widget Adapter\",\r\n  \"releaseDate\" : \"2016-08-29T09:12:33.001Z\",\r\n  \"manufacturer\" : {\r\n    \"name\" : \"ACME Corporation\",\r\n    \"homePage\" : \"https://www.acme-corp.com\",\r\n    \"phone\" : \"408-867-5309\"\r\n  }\r\n}"}}},"responses":{"default":{"description":"Default response"}}},"delete":{"description":"","parameters":[{"name":"api_key","in":"header","required":false,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}}},"components":{"schemas":{"InventoryItem":{"required":["id","manufacturer","name","releaseDate"],"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"d290f1ee-6c54-4b01-90e6-d701748f0851"},"name":{"type":"string","example":"Widget Adapter"},"releaseDate":{"type":"string","format":"date-time","example":"2016-08-29T09:12:33.001Z"},"manufacturer":{"$ref":"#/components/schemas/Manufacturer"}}},"Manufacturer":{"required":["name"],"type":"object","properties":{"name":{"type":"string","example":"ACME Corporation"},"homePage":{"type":"string","format":"url","example":"https://www.acme-corp.com"},"phone":{"type":"string","example":"408-867-5309"}}}}}}</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>http://localhost:8017/</con:endpoint>
+    <con:endpoint>https://virtserver.swaggerhub.com/Corey_Projects/Magic/1.0.0</con:endpoint>
+    <con:endpoint>https://virtserver.swaggerhub.com/Corey_Projects/Magic/2.0.0</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction xmlns:con="http://eviware.com/soapui/config" name="/inventory" method="DELETE" resourcePath="/inventory" id="637d4cb3-163e-4156-838c-32c2b02f069b">
+  <con:settings id="48ed0200-2156-4df6-a60b-e334f58b0da9">
+    <con:setting id="637d4cb3-163e-4156-838c-32c2b02f069bfileName">%2Finventory1-1</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="a2e889d5-860d-4b62-9b24-42aec047a7bc" httpResponseStatus="200" dataSource="">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+</con:restMockAction>

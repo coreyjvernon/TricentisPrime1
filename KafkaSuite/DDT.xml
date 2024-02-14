@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="a9ae7a96-f12c-4b9c-aec2-0dd27b51b330" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="DDT" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="">
+  <con:settings id="8205827d-ffb0-4c6b-b3e6-5e262693abab">
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="a9ae7a96-f12c-4b9c-aec2-0dd27b51b330fileName">DDT</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="Data Source" id="78df9a72-25dc-4cad-96cc-6bf7e0681832">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
+      <con:dataSource type="Grid">
+        <con:configuration>
+          <check>&lt;con:entry xmlns:con="http://eviware.com/soapui/config">true&lt;/con:entry></check>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">input</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">expected</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <recognizeAsPlainText>true</recognizeAsPlainText>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>height</con:property>
+      <con:property>Expected result</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="multiConfigureTestStep" name="PublishQuickStart" id="5584aad0-3502-465b-b2fe-438d2f69068b">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" activeStep="kafkaPublishTestStep" xsi:type="con:MultiConfigurationStep">
+      <con:kafkaPublishStep>
+        <con:operationId>da98b7c8-285a-453d-a997-3529571f71ea</con:operationId>
+        <con:operationName>Publish</con:operationName>
+        <con:channelName>quickstartevents</con:channelName>
+        <con:serviceName>KafkaService</con:serviceName>
+        <con:endpoint>localhost:9092</con:endpoint>
+        <con:connectionProperties/>
+        <con:schemaRegistry/>
+        <con:environmentSpec>
+          <con:entry environmentId="Default">
+            <con:authProfile>samplw</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+        <con:messageType>JSON via Avro (Confluent)</con:messageType>
+        <con:message>{
+   
+   "height" : "${Data Source#height}",
+   "mass" : "77",
+   "hair_color" : "blond",
+   "skin_color" : "fair",
+   "eye_color" : "blue",
+   "birth_year" : "19BBY",
+   "gender" : "male",
+   "homeworld" : "http://swapi.dev/api/planets/1/",
+   "films" : [
+      "http://swapi.dev/api/films/1/",
+      "http://swapi.dev/api/films/2/",
+      "http://swapi.dev/api/films/3/",
+      "http://swapi.dev/api/films/6/"
+   ],
+   "species" : [ ],
+   "vehicles" : [
+      "http://swapi.dev/api/vehicles/14/",
+      "http://swapi.dev/api/vehicles/30/"
+   ],
+   "starships" : [
+      "http://swapi.dev/api/starships/12/",
+      "http://swapi.dev/api/starships/22/"
+   ],
+   "created" : "2014-12-09T13:50:51.644000Z",
+   "edited" : "2014-12-20T21:17:56.891000Z",
+   "url" : "http://swapi.dev/api/people/1/"
+}</con:message>
+        <con:parameters>
+          <con:parameter>
+            <con:name/>
+            <con:value xsi:nil="true"/>
+            <con:type>Header</con:type>
+          </con:parameter>
+        </con:parameters>
+      </con:kafkaPublishStep>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="multiConfigureTestStep" name="SubscribeQuickStart" id="5965aaf1-1945-4d83-8bbe-4522f1c0de5a">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" activeStep="kafkaSubscribeTestStep" xsi:type="con:MultiConfigurationStep">
+      <con:kafkaSubscribeStep>
+        <con:operationId>2f10ebd0-4dd6-487f-a7be-92e6f4c4b9b0</con:operationId>
+        <con:operationName>Subscribe</con:operationName>
+        <con:channelName>quickstartevents</con:channelName>
+        <con:serviceName>KafkaService</con:serviceName>
+        <con:endpoint>localhost:9092</con:endpoint>
+        <con:connectionProperties/>
+        <con:schemaRegistry/>
+        <con:messageType>JSON</con:messageType>
+        <con:closeConditionType>ANY_CONDITION</con:closeConditionType>
+        <con:maxIdleTime>4</con:maxIdleTime>
+        <con:maxMessagesReceived>50</con:maxMessagesReceived>
+        <con:maxRunTime>4</con:maxRunTime>
+        <con:assertion type="Simple Contains" id="be4ba793-97ba-4ec6-8c37-086e6c81ee29" name="Contains">
+          <con:configuration>
+            <token>mass</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="519f2450-563d-46d3-8b6f-810cf23956b3" name="JSONPath Match">
+          <con:configuration>
+            <path>$['mass']</path>
+            <content>${Data Source#Expected result}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+      </con:kafkaSubscribeStep>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="Data Source Loop" id="4faa27c7-135a-43d4-88ae-1e0486a45e8f">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>Data Source</dataSourceStep>
+      <targetStep>PublishQuickStart</targetStep>
+      <discardResults>false</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>1d7134b5-7787-4244-855f-bea9d020f6d3</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>e2605a09-03ad-440b-a741-7c416637a534</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>78df9a72-25dc-4cad-96cc-6bf7e0681832</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

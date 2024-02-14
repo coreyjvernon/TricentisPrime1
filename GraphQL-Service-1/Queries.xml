@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operationGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" type="query" name="Queries" id="05b19ac2-814c-4728-9593-1fc02bc760c6">
+  <con:settings id="d8819da7-8409-4225-bec4-92d9e1110748">
+    <con:setting id="05b19ac2-814c-4728-9593-1fc02bc760c6fileName">Queries</con:setting>
+  </con:settings>
+  <con:graphQLOperation name="allFilms" bindingOperationName="allFilms" id="4fbdce56-2228-4990-819f-19550debdfe6">
+    <con:settings/>
+    <con:graphQLRequest name="allFilms" id="2c84ed0d-87bd-4711-896f-9454356dd802">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://swapi-graphql.netlify.com/.netlify/functions/index</con:endpoint>
+      <con:request>{"query":"query {\n  allFilms(after: \"New Hope\") {\n    pageInfo {\n      hasNextPage\n      hasPreviousPage\n      startCursor\n      endCursor\n    }\n    edges {\n      node {\n        title\n        episodeID\n        openingCrawl\n        director\n        producers\n        releaseDate\n        speciesConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            node {\n              name\n              classification\n              designation\n              averageHeight\n              averageLifespan\n              eyeColors\n              hairColors\n              skinColors\n              language\n              homeworld {\n                name\n                diameter\n                rotationPeriod\n                orbitalPeriod\n                gravity\n                population\n                climates\n                terrains\n                surfaceWater\n                residentConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    node {\n                      name\n                      birthYear\n                      eyeColor\n                      gender\n                      hairColor\n                      height\n                      mass\n                      skinColor\n                      filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          node {\n                            name\n                            model\n                            starshipClass\n                            manufacturers\n                            costInCredits\n                            length\n                            crew\n                            passengers\n                            maxAtmospheringSpeed\n                            hyperdriveRating\n                            MGLT\n                            cargoCapacity\n                            consumables\n                            pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            created\n                            edited\n                            id\n                          }\n                          cursor\n                        }\n                        totalCount\n                      }\n                      vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          node {\n                            name\n                            model\n                            vehicleClass\n                            manufacturers\n                            costInCredits\n                            length\n                            crew\n                            passengers\n                            maxAtmospheringSpeed\n                            cargoCapacity\n                            consumables\n                            pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            created\n                            edited\n                            id\n                          }\n                          cursor\n                        }\n                        totalCount\n                      }\n                      created\n                      edited\n                      id\n                    }\n                    cursor\n                  }\n                  totalCount\n                }\n                filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    cursor\n                  }\n                  totalCount\n                }\n                created\n                edited\n                id\n              }\n              personConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                edges {\n                  cursor\n                }\n                totalCount\n              }\n              filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                edges {\n                  cursor\n                }\n                totalCount\n              }\n              created\n              edited\n              id\n            }\n            cursor\n          }\n          totalCount\n        }\n        starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            cursor\n          }\n          totalCount\n        }\n        vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            cursor\n          }\n          totalCount\n        }\n        characterConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            cursor\n          }\n          totalCount\n        }\n        planetConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            cursor\n          }\n          totalCount\n        }\n        created\n        edited\n        id\n      }\n      cursor\n    }\n    totalCount\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:graphQLRequest>
+    <con:environmentSpec>
+      <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="film" bindingOperationName="film" id="ddfb6763-b053-4c94-a856-b0955f7f8622">
+    <con:settings/>
+    <con:graphQLRequest name="film" id="e13143bc-7355-4794-a692-9408ae9f713d">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://swapi-graphql.netlify.com/.netlify/functions/index</con:endpoint>
+      <con:request>{"query":"query {\n  film(id: \"ZmlsbXM6MQ==\") {\n    title\n    episodeID\n    openingCrawl\n    director\n    producers\n    releaseDate\n    speciesConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n      edges {\n        node {\n          name\n          classification\n          designation\n          averageHeight\n          averageLifespan\n          eyeColors\n          hairColors\n          skinColors\n          language\n          homeworld {\n            name\n            diameter\n            rotationPeriod\n            orbitalPeriod\n            gravity\n            population\n            climates\n            terrains\n            surfaceWater\n            residentConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n              edges {\n                node {\n                  name\n                  birthYear\n                  eyeColor\n                  gender\n                  hairColor\n                  height\n                  mass\n                  skinColor\n                  filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        title\n                        episodeID\n                        openingCrawl\n                        director\n                        producers\n                        releaseDate\n                        starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            node {\n                              name\n                              model\n                              starshipClass\n                              manufacturers\n                              costInCredits\n                              length\n                              crew\n                              passengers\n                              maxAtmospheringSpeed\n                              hyperdriveRating\n                              MGLT\n                              cargoCapacity\n                              consumables\n                              pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                                edges {\n                                  cursor\n                                }\n                                totalCount\n                              }\n                              filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                                edges {\n                                  cursor\n                                }\n                                totalCount\n                              }\n                              created\n                              edited\n                              id\n                            }\n                            cursor\n                          }\n                          totalCount\n                        }\n                        vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            node {\n                              name\n                              model\n                              vehicleClass\n                              manufacturers\n                              costInCredits\n                              length\n                              crew\n                              passengers\n                              maxAtmospheringSpeed\n                              cargoCapacity\n                              consumables\n                              pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                                edges {\n                                  cursor\n                                }\n                                totalCount\n                              }\n                              filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                                edges {\n                                  cursor\n                                }\n                                totalCount\n                              }\n                              created\n                              edited\n                              id\n                            }\n                            cursor\n                          }\n                          totalCount\n                        }\n                        characterConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        planetConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      cursor\n                    }\n                    totalCount\n                  }\n                  vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      cursor\n                    }\n                    totalCount\n                  }\n                  created\n                  edited\n                  id\n                }\n                cursor\n              }\n              totalCount\n            }\n            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n              edges {\n                cursor\n              }\n              totalCount\n            }\n            created\n            edited\n            id\n          }\n          personConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              cursor\n            }\n            totalCount\n          }\n          filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              cursor\n            }\n            totalCount\n          }\n          created\n          edited\n          id\n        }\n        cursor\n      }\n      totalCount\n    }\n    created\n    edited\n    id\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:graphQLRequest>
+    <con:environmentSpec>
+      <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="allPeople" bindingOperationName="allPeople" id="3cbb6e18-56e1-4d5f-a58d-d19d42efbd4e">
+    <con:settings/>
+    <con:graphQLRequest name="allPeople" id="e75b9d56-1a4e-4618-8636-108498528ba1">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://swapi-graphql.netlify.com/.netlify/functions/index</con:endpoint>
+      <con:request>{"query":"query {\n  allPeople(after: \"New Hope\") {\n  \t\n    pageInfo {\n      hasNextPage\n      hasPreviousPage\n      startCursor\n      endCursor\n    }\n    edges {\n      node {\n        name\n        birthYear\n        eyeColor\n        gender\n        hairColor\n        height\n        mass\n        skinColor\n        homeworld {\n          name\n          diameter\n          rotationPeriod\n          orbitalPeriod\n          gravity\n          population\n          climates\n          terrains\n          surfaceWater\n          residentConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              cursor\n            }\n            totalCount\n          }\n          filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              node {\n                title\n                episodeID\n                openingCrawl\n                director\n                producers\n                releaseDate\n                speciesConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    node {\n                      name\n                      classification\n                      designation\n                      averageHeight\n                      averageLifespan\n                      eyeColors\n                      hairColors\n                      skinColors\n                      language\n                      personConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      created\n                      edited\n                      id\n                    }\n                    cursor\n                  }\n                  totalCount\n                }\n                starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    node {\n                      name\n                      model\n                      starshipClass\n                      manufacturers\n                      costInCredits\n                      length\n                      crew\n                      passengers\n                      maxAtmospheringSpeed\n                      hyperdriveRating\n                      MGLT\n                      cargoCapacity\n                      consumables\n                      pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      created\n                      edited\n                      id\n                    }\n                    cursor\n                  }\n                  totalCount\n                }\n                vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    node {\n                      name\n                      model\n                      vehicleClass\n                      manufacturers\n                      costInCredits\n                      length\n                      crew\n                      passengers\n                      maxAtmospheringSpeed\n                      cargoCapacity\n                      consumables\n                      pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      created\n                      edited\n                      id\n                    }\n                    cursor\n                  }\n                  totalCount\n                }\n                characterConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    cursor\n                  }\n                  totalCount\n                }\n                planetConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    cursor\n                  }\n                  totalCount\n                }\n                created\n                edited\n                id\n              }\n              cursor\n            }\n            totalCount\n          }\n          created\n          edited\n          id\n        }\n        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            cursor\n          }\n          totalCount\n        }\n        starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            cursor\n          }\n          totalCount\n        }\n        vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            cursor\n          }\n          totalCount\n        }\n        created\n        edited\n        id\n      }\n      cursor\n    }\n    totalCount\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:graphQLRequest>
+    <con:environmentSpec>
+      <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="person" bindingOperationName="person" id="5d334917-a8dc-42e6-9e94-64de4bf35025">
+    <con:settings/>
+    <con:graphQLRequest name="person" id="aa681593-72b3-4ab6-9a6d-2130a8ffac4e">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://swapi-graphql.netlify.com/.netlify/functions/index</con:endpoint>
+      <con:request>{"query":"query {\n  person(id: \"\", personID: \"1\") {\n    name\n    birthYear\n    eyeColor\n    gender\n    hairColor\n    height\n    mass\n    skinColor\n    homeworld {\n      name\n      diameter\n      rotationPeriod\n      orbitalPeriod\n      gravity\n      population\n      climates\n      terrains\n      surfaceWater\n      residentConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n        pageInfo {\n          hasNextPage\n          hasPreviousPage\n          startCursor\n          endCursor\n        }\n        edges {\n          node {\n            name\n            birthYear\n            eyeColor\n            gender\n            hairColor\n            height\n            mass\n            skinColor\n            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n              edges {\n                node {\n                  title\n                  episodeID\n                  openingCrawl\n                  director\n                  producers\n                  releaseDate\n                  speciesConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        classification\n                        designation\n                        averageHeight\n                        averageLifespan\n                        eyeColors\n                        hairColors\n                        skinColors\n                        language\n                        personConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        model\n                        starshipClass\n                        manufacturers\n                        costInCredits\n                        length\n                        crew\n                        passengers\n                        maxAtmospheringSpeed\n                        hyperdriveRating\n                        MGLT\n                        cargoCapacity\n                        consumables\n                        pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        model\n                        vehicleClass\n                        manufacturers\n                        costInCredits\n                        length\n                        crew\n                        passengers\n                        maxAtmospheringSpeed\n                        cargoCapacity\n                        consumables\n                        pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                          \t\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  characterConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      cursor\n                    }\n                    totalCount\n                  }\n                  planetConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      cursor\n                    }\n                    totalCount\n                  }\n                  created\n                  edited\n                  id\n                }\n                cursor\n              }\n              totalCount\n            }\n            starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n              edges {\n                cursor\n              }\n              totalCount\n            }\n            vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n              edges {\n                cursor\n              }\n              totalCount\n            }\n            created\n            edited\n            id\n          }\n          cursor\n        }\n        totalCount\n      }\n      filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n        edges {\n          cursor\n        }\n        totalCount\n        films{\n        \t\n        \t}\n      }\n      created\n      edited\n      id\n    }\n    created\n    edited\n    id\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:graphQLRequest>
+    <con:environmentSpec>
+      <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="allPlanets" bindingOperationName="allPlanets" id="e7d7c54f-40ef-4502-9081-cb5336ffa166">
+    <con:settings/>
+    <con:graphQLRequest name="allPlanets" id="a7bdaba8-5e18-4b4a-9a54-6fce8dfbf39c">
+      <con:settings/>
+      <con:endpoint>https://swapi-graphql.netlify.com/.netlify/functions/index</con:endpoint>
+      <con:request>{"query":"query {\n  allPlanets(after: \"string\", first: 0, before: \"string\", last: 0) {\n    pageInfo {\n      hasNextPage\n      hasPreviousPage\n      startCursor\n      endCursor\n    }\n    edges {\n      node {\n        name\n        diameter\n        rotationPeriod\n        orbitalPeriod\n        gravity\n        population\n        climates\n        terrains\n        surfaceWater\n        residentConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            node {\n              name\n              birthYear\n              eyeColor\n              gender\n              hairColor\n              height\n              mass\n              skinColor\n              filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                edges {\n                  node {\n                    title\n                    episodeID\n                    openingCrawl\n                    director\n                    producers\n                    releaseDate\n                    speciesConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                      edges {\n                        node {\n                          name\n                          classification\n                          designation\n                          averageHeight\n                          averageLifespan\n                          eyeColors\n                          hairColors\n                          skinColors\n                          language\n                          personConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                            edges {\n                              cursor\n                            }\n                            totalCount\n                          }\n                          filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                            edges {\n                              cursor\n                            }\n                            totalCount\n                          }\n                          created\n                          edited\n                          id\n                        }\n                        cursor\n                      }\n                      totalCount\n                    }\n                    starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                      edges {\n                        node {\n                          name\n                          model\n                          starshipClass\n                          manufacturers\n                          costInCredits\n                          length\n                          crew\n                          passengers\n                          maxAtmospheringSpeed\n                          hyperdriveRating\n                          MGLT\n                          cargoCapacity\n                          consumables\n                          pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                            edges {\n                              cursor\n                            }\n                            totalCount\n                          }\n                          filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                            edges {\n                              cursor\n                            }\n                            totalCount\n                          }\n                          created\n                          edited\n                          id\n                        }\n                        cursor\n                      }\n                      totalCount\n                    }\n                    vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                      edges {\n                        node {\n                          name\n                          model\n                          vehicleClass\n                          manufacturers\n                          costInCredits\n                          length\n                          crew\n                          passengers\n                          maxAtmospheringSpeed\n                          cargoCapacity\n                          consumables\n                          pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                            edges {\n                              cursor\n                            }\n                            totalCount\n                          }\n                          filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                            edges {\n                              cursor\n                            }\n                            totalCount\n                          }\n                          created\n                          edited\n                          id\n                        }\n                        cursor\n                      }\n                      totalCount\n                    }\n                    characterConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                      edges {\n                        cursor\n                      }\n                      totalCount\n                    }\n                    planetConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                      edges {\n                        cursor\n                      }\n                      totalCount\n                    }\n                    created\n                    edited\n                    id\n                  }\n                  cursor\n                }\n                totalCount\n              }\n              starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                edges {\n                  cursor\n                }\n                totalCount\n              }\n              vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                edges {\n                  cursor\n                }\n                totalCount\n              }\n              created\n              edited\n              id\n            }\n            cursor\n          }\n          totalCount\n        }\n        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            cursor\n          }\n          totalCount\n        }\n        created\n        edited\n        id\n      }\n      cursor\n    }\n    totalCount\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:graphQLRequest>
+    <con:environmentSpec>
+      <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="planet" bindingOperationName="planet" id="ee78d79c-43a0-415b-951d-be37edab640e">
+    <con:settings/>
+    <con:graphQLRequest name="planet" id="e6aca7de-6a89-4096-a7f1-00e758f0297a">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://swapi-graphql.netlify.com/.netlify/functions/index</con:endpoint>
+      <con:request>{"query":"query {\n  planet(id: \"3fa85f64-5717-4562-b3fc-2c963f66afa6\", planetID: \"3fa85f64-5717-4562-b3fc-2c963f66afa6\") {\n    name\n    diameter\n    rotationPeriod\n    orbitalPeriod\n    gravity\n    population\n    climates\n    terrains\n    surfaceWater\n    residentConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n      pageInfo {\n        hasNextPage\n        hasPreviousPage\n        startCursor\n        endCursor\n      }\n      edges {\n        node {\n          name\n          birthYear\n          eyeColor\n          gender\n          hairColor\n          height\n          mass\n          skinColor\n          homeworld {\n            name\n            diameter\n            rotationPeriod\n            orbitalPeriod\n            gravity\n            population\n            climates\n            terrains\n            surfaceWater\n            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n              edges {\n                node {\n                  title\n                  episodeID\n                  openingCrawl\n                  director\n                  producers\n                  releaseDate\n                  speciesConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        classification\n                        designation\n                        averageHeight\n                        averageLifespan\n                        eyeColors\n                        hairColors\n                        skinColors\n                        language\n                        personConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        model\n                        starshipClass\n                        manufacturers\n                        costInCredits\n                        length\n                        crew\n                        passengers\n                        maxAtmospheringSpeed\n                        hyperdriveRating\n                        MGLT\n                        cargoCapacity\n                        consumables\n                        pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        model\n                        vehicleClass\n                        manufacturers\n                        costInCredits\n                        length\n                        crew\n                        passengers\n                        maxAtmospheringSpeed\n                        cargoCapacity\n                        consumables\n                        pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  characterConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      cursor\n                    }\n                    totalCount\n                  }\n                  planetConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      cursor\n                    }\n                    totalCount\n                  }\n                  created\n                  edited\n                  id\n                }\n                cursor\n              }\n              totalCount\n            }\n            created\n            edited\n            id\n          }\n          filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              cursor\n            }\n            totalCount\n          }\n          starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              cursor\n            }\n            totalCount\n          }\n          vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              cursor\n            }\n            totalCount\n          }\n          created\n          edited\n          id\n        }\n        cursor\n      }\n      totalCount\n    }\n    created\n    edited\n    id\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:graphQLRequest>
+    <con:environmentSpec>
+      <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="allSpecies" bindingOperationName="allSpecies" id="724b2ad6-fce0-4043-8337-67878edf855b">
+    <con:settings/>
+    <con:graphQLRequest name="allSpecies" id="4124e23c-93f3-4eff-aa3c-8df4ecb805af">
+      <con:settings/>
+      <con:endpoint>https://swapi-graphql.netlify.com/.netlify/functions/index</con:endpoint>
+      <con:request>{"query":"query {\n  allSpecies(after: \"string\", first: 0, before: \"string\", last: 0) {\n    pageInfo {\n      hasNextPage\n      hasPreviousPage\n      startCursor\n      endCursor\n    }\n    edges {\n      node {\n        name\n        classification\n        designation\n        averageHeight\n        averageLifespan\n        eyeColors\n        hairColors\n        skinColors\n        language\n        homeworld {\n          name\n          diameter\n          rotationPeriod\n          orbitalPeriod\n          gravity\n          population\n          climates\n          terrains\n          surfaceWater\n          residentConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              node {\n                name\n                birthYear\n                eyeColor\n                gender\n                hairColor\n                height\n                mass\n                skinColor\n                filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    node {\n                      title\n                      episodeID\n                      openingCrawl\n                      director\n                      producers\n                      releaseDate\n                      speciesConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          node {\n                            name\n                            model\n                            starshipClass\n                            manufacturers\n                            costInCredits\n                            length\n                            crew\n                            passengers\n                            maxAtmospheringSpeed\n                            hyperdriveRating\n                            MGLT\n                            cargoCapacity\n                            consumables\n                            pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            created\n                            edited\n                            id\n                          }\n                          cursor\n                        }\n                        totalCount\n                      }\n                      vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          node {\n                            name\n                            model\n                            vehicleClass\n                            manufacturers\n                            costInCredits\n                            length\n                            crew\n                            passengers\n                            maxAtmospheringSpeed\n                            cargoCapacity\n                            consumables\n                            pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            created\n                            edited\n                            id\n                          }\n                          cursor\n                        }\n                        totalCount\n                      }\n                      characterConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      planetConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      created\n                      edited\n                      id\n                    }\n                    cursor\n                  }\n                  totalCount\n                }\n                starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    cursor\n                  }\n                  totalCount\n                }\n                vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    cursor\n                  }\n                  totalCount\n                }\n                created\n                edited\n                id\n              }\n              cursor\n            }\n            totalCount\n          }\n          filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              cursor\n            }\n            totalCount\n          }\n          created\n          edited\n          id\n        }\n        personConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            cursor\n          }\n          totalCount\n        }\n        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            cursor\n          }\n          totalCount\n        }\n        created\n        edited\n        id\n      }\n      cursor\n    }\n    totalCount\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:graphQLRequest>
+    <con:environmentSpec>
+      <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="species" bindingOperationName="species" id="98a5afe7-493e-489a-bb95-ae03bd390cab">
+    <con:settings/>
+    <con:graphQLRequest name="species" id="5cef818a-f601-4d82-a026-57bf25017290">
+      <con:settings/>
+      <con:endpoint>https://swapi-graphql.netlify.com/.netlify/functions/index</con:endpoint>
+      <con:request>{"query":"query {\n  species(id: \"3fa85f64-5717-4562-b3fc-2c963f66afa6\", speciesID: \"3fa85f64-5717-4562-b3fc-2c963f66afa6\") {\n    name\n    classification\n    designation\n    averageHeight\n    averageLifespan\n    eyeColors\n    hairColors\n    skinColors\n    language\n    homeworld {\n      name\n      diameter\n      rotationPeriod\n      orbitalPeriod\n      gravity\n      population\n      climates\n      terrains\n      surfaceWater\n      residentConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n        pageInfo {\n          hasNextPage\n          hasPreviousPage\n          startCursor\n          endCursor\n        }\n        edges {\n          node {\n            name\n            birthYear\n            eyeColor\n            gender\n            hairColor\n            height\n            mass\n            skinColor\n            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n              edges {\n                node {\n                  title\n                  episodeID\n                  openingCrawl\n                  director\n                  producers\n                  releaseDate\n                  speciesConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        classification\n                        designation\n                        averageHeight\n                        averageLifespan\n                        eyeColors\n                        hairColors\n                        skinColors\n                        language\n                        personConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        model\n                        starshipClass\n                        manufacturers\n                        costInCredits\n                        length\n                        crew\n                        passengers\n                        maxAtmospheringSpeed\n                        hyperdriveRating\n                        MGLT\n                        cargoCapacity\n                        consumables\n                        pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        model\n                        vehicleClass\n                        manufacturers\n                        costInCredits\n                        length\n                        crew\n                        passengers\n                        maxAtmospheringSpeed\n                        cargoCapacity\n                        consumables\n                        pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  characterConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      cursor\n                    }\n                    totalCount\n                  }\n                  planetConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      cursor\n                    }\n                    totalCount\n                  }\n                  created\n                  edited\n                  id\n                }\n                cursor\n              }\n              totalCount\n            }\n            starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n              edges {\n                cursor\n              }\n              totalCount\n            }\n            vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n              edges {\n                cursor\n              }\n              totalCount\n            }\n            created\n            edited\n            id\n          }\n          cursor\n        }\n        totalCount\n      }\n      filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n        edges {\n          cursor\n        }\n        totalCount\n      }\n      created\n      edited\n      id\n    }\n    created\n    edited\n    id\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:graphQLRequest>
+    <con:environmentSpec>
+      <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="allStarships" bindingOperationName="allStarships" id="3de42009-112a-47a1-aa25-584caa865546">
+    <con:settings/>
+    <con:graphQLRequest name="allStarships" id="a929c9ac-4b60-48b0-9ab5-4076b384c80a">
+      <con:settings/>
+      <con:endpoint>https://swapi-graphql.netlify.com/.netlify/functions/index</con:endpoint>
+      <con:request>{"query":"query {\n  allStarships(after: \"string\", first: 0, before: \"string\", last: 0) {\n    pageInfo {\n      hasNextPage\n      hasPreviousPage\n      startCursor\n      endCursor\n    }\n    edges {\n      node {\n        name\n        model\n        starshipClass\n        manufacturers\n        costInCredits\n        length\n        crew\n        passengers\n        maxAtmospheringSpeed\n        hyperdriveRating\n        MGLT\n        cargoCapacity\n        consumables\n        pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            node {\n              name\n              birthYear\n              eyeColor\n              gender\n              hairColor\n              height\n              mass\n              skinColor\n              homeworld {\n                name\n                diameter\n                rotationPeriod\n                orbitalPeriod\n                gravity\n                population\n                climates\n                terrains\n                surfaceWater\n                residentConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    cursor\n                  }\n                  totalCount\n                }\n                filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    node {\n                      title\n                      episodeID\n                      openingCrawl\n                      director\n                      producers\n                      releaseDate\n                      speciesConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          node {\n                            name\n                            classification\n                            designation\n                            averageHeight\n                            averageLifespan\n                            eyeColors\n                            hairColors\n                            skinColors\n                            language\n                            personConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            created\n                            edited\n                            id\n                          }\n                          cursor\n                        }\n                        totalCount\n                      }\n                      starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          node {\n                            name\n                            model\n                            vehicleClass\n                            manufacturers\n                            costInCredits\n                            length\n                            crew\n                            passengers\n                            maxAtmospheringSpeed\n                            cargoCapacity\n                            consumables\n                            pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            created\n                            edited\n                            id\n                          }\n                          cursor\n                        }\n                        totalCount\n                      }\n                      characterConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      planetConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      created\n                      edited\n                      id\n                    }\n                    cursor\n                  }\n                  totalCount\n                }\n                created\n                edited\n                id\n              }\n              filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                edges {\n                  cursor\n                }\n                totalCount\n              }\n              starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                edges {\n                  cursor\n                }\n                totalCount\n              }\n              vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                edges {\n                  cursor\n                }\n                totalCount\n              }\n              created\n              edited\n              id\n            }\n            cursor\n          }\n          totalCount\n        }\n        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            cursor\n          }\n          totalCount\n        }\n        created\n        edited\n        id\n      }\n      cursor\n    }\n    totalCount\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:graphQLRequest>
+    <con:environmentSpec>
+      <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="starship" bindingOperationName="starship" id="ef62a577-ee07-4fc6-98d5-5bbf0da24904">
+    <con:settings/>
+    <con:graphQLRequest name="starship" id="3a3e80e2-563f-4ba0-a1b7-c478db5147f1">
+      <con:settings/>
+      <con:endpoint>https://swapi-graphql.netlify.com/.netlify/functions/index</con:endpoint>
+      <con:request>{"query":"query {\n  starship(id: \"3fa85f64-5717-4562-b3fc-2c963f66afa6\", starshipID: \"3fa85f64-5717-4562-b3fc-2c963f66afa6\") {\n    name\n    model\n    starshipClass\n    manufacturers\n    costInCredits\n    length\n    crew\n    passengers\n    maxAtmospheringSpeed\n    hyperdriveRating\n    MGLT\n    cargoCapacity\n    consumables\n    pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n      pageInfo {\n        hasNextPage\n        hasPreviousPage\n        startCursor\n        endCursor\n      }\n      edges {\n        node {\n          name\n          birthYear\n          eyeColor\n          gender\n          hairColor\n          height\n          mass\n          skinColor\n          homeworld {\n            name\n            diameter\n            rotationPeriod\n            orbitalPeriod\n            gravity\n            population\n            climates\n            terrains\n            surfaceWater\n            residentConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n              edges {\n                cursor\n              }\n              totalCount\n            }\n            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n              edges {\n                node {\n                  title\n                  episodeID\n                  openingCrawl\n                  director\n                  producers\n                  releaseDate\n                  speciesConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        classification\n                        designation\n                        averageHeight\n                        averageLifespan\n                        eyeColors\n                        hairColors\n                        skinColors\n                        language\n                        personConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        model\n                        starshipClass\n                        manufacturers\n                        costInCredits\n                        length\n                        crew\n                        passengers\n                        maxAtmospheringSpeed\n                        hyperdriveRating\n                        MGLT\n                        cargoCapacity\n                        consumables\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        model\n                        vehicleClass\n                        manufacturers\n                        costInCredits\n                        length\n                        crew\n                        passengers\n                        maxAtmospheringSpeed\n                        cargoCapacity\n                        consumables\n                        pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  characterConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      cursor\n                    }\n                    totalCount\n                  }\n                  planetConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      cursor\n                    }\n                    totalCount\n                  }\n                  created\n                  edited\n                  id\n                }\n                cursor\n              }\n              totalCount\n            }\n            created\n            edited\n            id\n          }\n          filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              cursor\n            }\n            totalCount\n          }\n          starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              cursor\n            }\n            totalCount\n          }\n          vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              cursor\n            }\n            totalCount\n          }\n          created\n          edited\n          id\n        }\n        cursor\n      }\n      totalCount\n    }\n    created\n    edited\n    id\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:graphQLRequest>
+    <con:environmentSpec>
+      <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="allVehicles" bindingOperationName="allVehicles" id="23f82bea-9c04-47c6-b5e8-8ccfcee4ea5f">
+    <con:settings/>
+    <con:graphQLRequest name="allVehicles" id="43974ffc-ebc6-4bb0-a8df-20826dd3efa4">
+      <con:settings/>
+      <con:endpoint>https://swapi-graphql.netlify.com/.netlify/functions/index</con:endpoint>
+      <con:request>{"query":"query {\n  allVehicles(after: \"string\", first: 0, before: \"string\", last: 0) {\n    pageInfo {\n      hasNextPage\n      hasPreviousPage\n      startCursor\n      endCursor\n    }\n    edges {\n      node {\n        name\n        model\n        vehicleClass\n        manufacturers\n        costInCredits\n        length\n        crew\n        passengers\n        maxAtmospheringSpeed\n        cargoCapacity\n        consumables\n        pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            node {\n              name\n              birthYear\n              eyeColor\n              gender\n              hairColor\n              height\n              mass\n              skinColor\n              homeworld {\n                name\n                diameter\n                rotationPeriod\n                orbitalPeriod\n                gravity\n                population\n                climates\n                terrains\n                surfaceWater\n                residentConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    cursor\n                  }\n                  totalCount\n                }\n                filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                  edges {\n                    node {\n                      title\n                      episodeID\n                      openingCrawl\n                      director\n                      producers\n                      releaseDate\n                      speciesConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          node {\n                            name\n                            classification\n                            designation\n                            averageHeight\n                            averageLifespan\n                            eyeColors\n                            hairColors\n                            skinColors\n                            language\n                            personConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            created\n                            edited\n                            id\n                          }\n                          cursor\n                        }\n                        totalCount\n                      }\n                      starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          node {\n                            name\n                            model\n                            starshipClass\n                            manufacturers\n                            costInCredits\n                            length\n                            crew\n                            passengers\n                            maxAtmospheringSpeed\n                            hyperdriveRating\n                            MGLT\n                            cargoCapacity\n                            consumables\n                            pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                              edges {\n                                cursor\n                              }\n                              totalCount\n                            }\n                            created\n                            edited\n                            id\n                          }\n                          cursor\n                        }\n                        totalCount\n                      }\n                      vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      characterConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      planetConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                        edges {\n                          cursor\n                        }\n                        totalCount\n                      }\n                      created\n                      edited\n                      id\n                    }\n                    cursor\n                  }\n                  totalCount\n                }\n                created\n                edited\n                id\n              }\n              filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                edges {\n                  cursor\n                }\n                totalCount\n              }\n              starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                edges {\n                  cursor\n                }\n                totalCount\n              }\n              vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                edges {\n                  cursor\n                }\n                totalCount\n              }\n              created\n              edited\n              id\n            }\n            cursor\n          }\n          totalCount\n        }\n        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n          edges {\n            cursor\n          }\n          totalCount\n        }\n        created\n        edited\n        id\n      }\n      cursor\n    }\n    totalCount\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:graphQLRequest>
+    <con:environmentSpec>
+      <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="vehicle" bindingOperationName="vehicle" id="79100f9f-5d5b-4b8b-bc0c-5589537366e0">
+    <con:settings/>
+    <con:graphQLRequest name="vehicle" id="d800deeb-4f7a-446e-af5e-3856ada18ca5">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://swapi-graphql.netlify.com/.netlify/functions/index</con:endpoint>
+      <con:request>{"query":"query {\n  vehicle(id: \"3fa85f64-5717-4562-b3fc-2c963f66afa6\", vehicleID: \"3fa85f64-5717-4562-b3fc-2c963f66afa6\") {\n    name\n    model\n    vehicleClass\n    manufacturers\n    costInCredits\n    length\n    crew\n    passengers\n    maxAtmospheringSpeed\n    cargoCapacity\n    consumables\n    pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n      pageInfo {\n        hasNextPage\n        hasPreviousPage\n        startCursor\n        endCursor\n      }\n      edges {\n        node {\n          name\n          birthYear\n          eyeColor\n          gender\n          hairColor\n          height\n          mass\n          skinColor\n          homeworld {\n            name\n            diameter\n            rotationPeriod\n            orbitalPeriod\n            gravity\n            population\n            climates\n            terrains\n            surfaceWater\n            residentConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n              edges {\n                cursor\n              }\n              totalCount\n            }\n            filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n              edges {\n                node {\n                  title\n                  episodeID\n                  openingCrawl\n                  director\n                  producers\n                  releaseDate\n                  speciesConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        classification\n                        designation\n                        averageHeight\n                        averageLifespan\n                        eyeColors\n                        hairColors\n                        skinColors\n                        language\n                        personConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        model\n                        starshipClass\n                        manufacturers\n                        costInCredits\n                        length\n                        crew\n                        passengers\n                        maxAtmospheringSpeed\n                        hyperdriveRating\n                        MGLT\n                        cargoCapacity\n                        consumables\n                        pilotConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      node {\n                        name\n                        model\n                        vehicleClass\n                        manufacturers\n                        costInCredits\n                        length\n                        crew\n                        passengers\n                        maxAtmospheringSpeed\n                        cargoCapacity\n                        consumables\n                        filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                          edges {\n                            cursor\n                          }\n                          totalCount\n                        }\n                        created\n                        edited\n                        id\n                      }\n                      cursor\n                    }\n                    totalCount\n                  }\n                  characterConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      cursor\n                    }\n                    totalCount\n                  }\n                  planetConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n                    edges {\n                      cursor\n                    }\n                    totalCount\n                  }\n                  created\n                  edited\n                  id\n                }\n                cursor\n              }\n              totalCount\n            }\n            created\n            edited\n            id\n          }\n          filmConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              cursor\n            }\n            totalCount\n          }\n          starshipConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              cursor\n            }\n            totalCount\n          }\n          vehicleConnection(after: \"string\", first: 0, before: \"string\", last: 0) {\n            edges {\n              cursor\n            }\n            totalCount\n          }\n          created\n          edited\n          id\n        }\n        cursor\n      }\n      totalCount\n    }\n    created\n    edited\n    id\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:graphQLRequest>
+    <con:environmentSpec>
+      <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="node" bindingOperationName="node" id="03b3e5ee-fc43-482d-b4a1-622436bf3dc6">
+    <con:settings/>
+    <con:graphQLRequest name="node" id="d41726fb-5508-4bde-aba6-ba9bb4cb47f9">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://swapi-graphql.netlify.com/.netlify/functions/index</con:endpoint>
+      <con:request>{"query":"query {\n  node(id: \"3fa85f64-5717-4562-b3fc-2c963f66afa6\") {\n    id\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:graphQLRequest>
+    <con:environmentSpec>
+      <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:graphQLOperation>
+  <con:environmentSpec>
+    <con:entry environmentId="e5030045-70fa-4d54-a4b4-c5d843ac1c47">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="291056ca-f4ce-4dc8-af77-73ff7998ef0e">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="294112e7-6161-42da-bd9c-f050fdce6d39">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="1ae04e77-495c-4d53-92a4-9706e3aff8e7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="12e7d7ee-4dab-4fdd-ab7d-2dd6184cbbac">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="c3a2baf5-bd64-4775-a560-9506e1bf43ec">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="7cfca2bf-3100-4d8a-84be-492895c7be8c">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operationGroup>

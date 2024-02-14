@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="55969f8e-b6f0-4276-91f4-adfaa341438b" name="PrimeSuite">
+  <con:settings id="d6216efa-2822-4f22-a9ae-7035a100aa9e">
+    <con:setting id="55969f8e-b6f0-4276-91f4-adfaa341438bfileName">PrimeSuite</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testSuite>

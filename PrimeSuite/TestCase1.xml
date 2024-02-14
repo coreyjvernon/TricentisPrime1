@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="f9b0682c-5e17-48ed-9009-35237f0e3492" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TestCase1" searchProperties="true" timeout="0">
+  <con:settings id="ff004457-6d34-4ab2-8288-313c4a8371e5">
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="f9b0682c-5e17-48ed-9009-35237f0e3492fileName">TestCase1</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="External" id="9b29f1f5-21c5-40bb-bb66-f97cf256c313">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/Users/corey.vernon/Desktop/Prime23/PrimeData.xlsx</file>
+          <worksheet/>
+          <cell>A1</cell>
+          <ignoreEmpty>false</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>itemName</con:property>
+      <con:property>itemID</con:property>
+      <con:property>manName</con:property>
+      <con:property>manPhone</con:property>
+      <con:property>itemNumber</con:property>
+      <con:startRow>1</con:startRow>
+      <con:endRow/>
+      <con:recordsPerIteration>1</con:recordsPerIteration>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:trimValues>false</con:trimValues>
+      <con:entitizeValues>false</con:entitizeValues>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:expandProperties>false</con:expandProperties>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request" id="ee8871db-4f35-48f5-8ac3-a0ca73b257a1">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Prime" resourcePath="/inventory" methodName="searchInventory" xsi:type="con:RestRequestStep">
+      <con:restRequest name="REST Request" id="2a6911ed-db73-4139-a5f9-7726fc42c622" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://virtserver.swaggerhub.com/Corey_Projects/Feb23Alpha/2.0.0</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://virtserver.swaggerhub.com/Corey_Projects/Feb23Alpha/2.0.0/inventory</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="23df7ebc-369d-493e-9b1e-0612d2586d66" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="2e0ba016-5ee1-4c80-ad40-7b19d822f4c0" name="Match content of [name]">
+          <con:configuration>
+            <path>$[0]['name']</path>
+            <content>${External#itemName}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="itemNumber" value="${External#itemNumber}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>itemNumber</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="Data Source Loop" id="4addd40d-34b2-485b-8af2-66da52346171">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>External</dataSourceStep>
+      <targetStep>REST Request</targetStep>
+      <discardResults>false</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="2408fd09-2032-4e1b-acdb-8c7777358df4">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>
